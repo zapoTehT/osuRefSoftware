@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Round {
-    private String roundName;
+    private final String roundName;
     private ArrayList<osuMap> mapPool = new ArrayList<>();
     private HashMap<String,Integer> modCounts = new HashMap<>();
 
@@ -31,4 +31,17 @@ public class Round {
             System.out.println(map.getMap());
         }
     }
+
+    public void printID() {
+        for(osuMap map : mapPool) {
+            System.out.println(map.getBeatmapID());
+        }
+    }
+
+
+    public String getRoundName() {
+        return roundName;
+    }
+
+
 }
